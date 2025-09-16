@@ -58,22 +58,25 @@ Use this generated password as your EMAIL_PASS
 
 ## Authentication Routes
 
-Method	Endpoint	Description	Request Body
-POST	/api/auth/register	Register a new user	{ name, email, password }
-POST	/api/auth/login	User login	{ email, password }
-POST	/api/auth/forgotPassword	Initiate password reset	{ email }
-POST	/api/auth/resetPassword/:token	Reset password with token	{ newPassword }
+| Method | Endpoint | Description | Request Body |
+| --- | --- | --- | --- |
+| POST | /api/auth/register | Register a new user | { name, email, password } |
+| POST | /api/auth/login | User login | { email, password } |
+| POST | /api/auth/forgotPassword | Initiate password reset | { email } |
+| POST | /api/auth/resetPassword/:token | Reset password with token | { newPassword } |
 
 ## Database Schema
 
 **User Model**
-
+{
   name: { type: String, required: true, trim: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   resetPasswordString: String,    
   resetPasswordExpires: Date,      
   timestamps: true                 
+
+}
 
 ###  Clone Repository
 ```bash
