@@ -1,6 +1,6 @@
-# 🔐 Password Reset Flow – Backend (Node.js + Express + MongoDB)
+## 🔐 Authentication & Password Reset – Backend (Node.js + Express + MongoDB)
 
-A complete Node.js/Express backend implementation for user authentication and password reset functionality.
+A complete Node.js/Express backend implementation for user authentication (Register, Login) and password reset functionality.
 
 This is the **backend** for the Password Reset flow, built using:
 - Node.js + Express
@@ -16,13 +16,21 @@ It provides APIs for **register, login, forgot password, and reset password**.
 ---
 
 ## 🚀 Features
-- ✅ User Registration & Login
-- ✅ Password Hashing with BcryptJS
-- ✅ Forgot Password with **random reset string**
-- ✅ Password Reset with token expiry (15 minutes)
-- ✅ Nodemailer (Gmail SMTP) integration
-- ✅ Centralized Error Handler
-- ✅ MongoDB Atlas connection
+✅ User Registration & Login (with JWT)
+
+✅ Password Hashing with BcryptJS
+
+✅ Forgot Password with random reset string
+
+✅ Password Reset with token expiry (15 minutes)
+
+✅ Nodemailer (Gmail SMTP) integration
+
+✅ Centralized Error Handler
+
+✅ MongoDB Atlas connection
+
+✅ CORS enabled for frontend
 
 ---
 
