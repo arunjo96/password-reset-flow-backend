@@ -1,7 +1,7 @@
 
 import nodemailer from "nodemailer";
 
- const sendEmail = async (to, subject, html ) => {
+ const sendEmail =  (to, subject, message ) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -10,11 +10,11 @@ import nodemailer from "nodemailer";
         }
         
     });
-        await transporter.sendMail({
+         transporter.sendMail({
             from: `"Password Reset" <${process.env.EMAIL_USER}>`,
             to,
             subject,
-            html
+            html: message 
     });
 }
 

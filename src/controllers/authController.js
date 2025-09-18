@@ -87,7 +87,8 @@ export const forgotPassword = async (req, res) => {
         const resetLink = `${process.env.CLIENT_URL}resetPassword/${resetString}`;
 
 
-        await sendEmail(user.email, "Password Reset", `
+         sendEmail(user.email,
+            "Password Reset", `
             <p>Click the link below to reset your password (valid for 15 minutes):</p>
             <a href="${resetLink}">${resetLink}</a> `);
 
