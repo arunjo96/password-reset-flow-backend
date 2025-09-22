@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 userSchema.pre('save', async function () {
-    if (!this.isModified('password'));
+    if (!this.isModified('password')) return;
         const saltRounds = await bcrypt.genSalt(Number(process.env.ENCRYPT_SALT_ROUNDS));
         this.password = await bcrypt.hash(this.password, saltRounds);
 });
