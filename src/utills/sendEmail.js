@@ -1,7 +1,7 @@
 
 import nodemailer from "nodemailer";
 
- const sendEmail =  (to, subject, message ) => {
+ const sendEmail =  (to, subject, text ) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -14,7 +14,7 @@ import nodemailer from "nodemailer";
             from: `"Password Reset" <${process.env.EMAIL_USER}>`,
             to,
             subject,
-            html: message 
+            html: text 
     });
 }
 
